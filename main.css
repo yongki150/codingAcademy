@@ -1,0 +1,312 @@
+body, ul, h1, h2{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+} 
+a{
+    text-decoration: none;
+    color: inherit
+}
+body{
+    text-align: center;
+    background-color: white;
+}
+.wrapper{
+    /* background-color: yellow; */
+    max-width: 980px;  
+    margin: 0 auto 20px;
+}
+.clearfix:after{
+    content:' ';
+    display: block;
+    clear: both;
+}
+.btn{
+    /* background-color: red; */
+    /* border-radius: 5px; */
+    color: #efefef;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 2rem;
+    text-align: center;
+    width: 150px;
+}
+.btn_large{
+    /* padding: 0 5rem; */
+    width: 250px;
+    background-color: lightseagreen;
+}
+
+.item{
+    font-weight: bold;
+    font-size: 2rem;
+    /* background-color: pink; */
+    position: fixed;
+    left: 10px;
+    top: 10%;
+    z-index : 10;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1;
+}
+.item-list{
+    background-color: aqua;
+    margin: 0 auto 20px;
+}
+.item-list:last-child(){
+    margin: 0;
+}
+.item-list > img{
+    width: 32px;
+    height: 32px;
+}
+.modal-window{
+    border-radius: 5px;
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.15);
+    /* background-color:  red; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+
+    opacity: 0; /* 글자가 안보이다가 */
+    transition: all 0.3s;
+}
+/* .modal-window의 id open-moda와 연결된 
+    href='#open-moda'를 클릭시 
+    .modal-window가 활성화됨 */
+.modal-window:target{ 
+    opacity: 1; /* 클릭시 보이게 하는 효과 
+                    opacitiy만 있을시 같은화면에 공존안됨 */
+    pointer-events: auto; /* 클릭시 활성화 */
+}
+.modal-window > div{
+    background-color: #f3f3f3;
+    /* background-color: black; */
+    color: #f9b253;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    background-color: #f9b253 ;
+}
+.modal-close:hover {
+    color: lightgrey; /* 444 → 000 */
+  }
+.open-checkout{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    display: none;
+}
+.open-checkout:target{
+    /* opacity: 1; */
+    pointer-events: auto;
+    display: block;
+}
+.open-checkout > div{
+    background-color: #f3f3f3;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    color: #fe594e;
+    
+    /* opacity: 0; */
+    /* pointer-events: auto; */
+}
+
+.close-checkout{
+    background-color: #fe594e;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+}
+.close-checkout:hover{
+    color: yellow;
+}
+.intro-video{
+    /* background-color: firebrick; */
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+.checkout-video{
+    /* background-color: pink; */
+    margin: 20px 0;
+    height: 50%;
+}
+.video{
+    width: 100%;
+}
+.checkout-btn{
+    background-color : #fe594e;
+    width: 80%;
+    margin: 10px auto 20px;
+}
+
+.logo-section{
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    text-align: center;
+    /* display: table; */
+    margin: 0 auto;
+}
+.logo-title{
+    /* background-color: pink; */
+    font-size: 5em;
+    /* display: table-cell; */
+    margin-top: 50px;
+    font-family: 'Sigmar One', cursive;
+}
+.logo{
+    background-image: url(https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Coding-Html-512.png);
+    
+    background-size: 128px;
+    /* background-color: peru; */
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    width: 150px;
+    height: 150px;
+    text-indent: -9999px;
+    position: relative;
+    top: 30px;
+}  
+.menu-section{
+    margin-top: -50px;
+    /* background-color: peru; */
+}
+.menu-bar{
+    background-color: #8372ce;
+}
+.menu{
+    padding: 30px;
+    
+    float: left;
+    border-right: 1px solid #efefef;
+}
+.slide{
+    z-index: 0;
+    position: relative;
+}
+.boxes{
+    margin: 300px -10px 50px;
+}
+.box{
+    width: 33.33333%;
+    box-sizing: border-box; /* padding 포함 */
+    padding: 0 10px;
+    float: left;
+}
+
+.c1{ background-color: #f9b253;}
+.c2{ background-color: #fe594e;}
+.c3{ background-color: #35a2a5;}
+.c4{ background-color: #8372ce;}
+
+.c1_c{color: #f9b253;}
+.c2_c{color: #fe594e;}
+.c3_c{color: #35a2a5;}
+.c4_c{color: #8372ce;}
+
+.box.html {color: #f16529;}
+.box.css {color: #48a0dc;}
+.box.js {color: #F0DB4E;}
+
+.box-contents{
+    background-color: antiquewhite;
+    padding: 40px 10px;
+    margin: -30px 0;
+    border-radius: 8px;
+}
+.box-logo{
+    width: 200px;
+    margin-top: -300px;
+}
+.box-logo-large{
+    width: 256px;
+    margin-bottom: -30px;
+}
+.box-logo:hover{
+    width: 300px;
+    transition: all 0.5s;
+}
+.box-contents h1{
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    display: inline-block;
+}
+.box-contents p{
+    color: black;
+}
+.box-footer{
+    padding: 20px;
+    background-color: #333;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.button{
+    background-color: currentColor;
+    padding: 20px 0 10px;
+    border-radius: 5px;
+}
+.button span{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+footer{
+    /* border-top: 1px solid black; */
+}
+.figure{
+    background: #8372ce;
+    color: white;
+}
+.figure-box{
+    padding: 30px;
+    margin: 0 -50px;
+    box-sizing: border-box;
+}
+.figure-section{
+    /* background-color: peru; */
+    float: left;
+    border-right: 1px solid #efefef;
+    width: 25%;
+    
+}
+.figure-section:last-child{
+    border-right: 0;
+}
+.figure-section h2{
+    font-size: 10em;
+    line-height: 1;
+    padding: 0 0 0.2em;
+}
+.figure-section span{
+    margin: 10px;
+}
+
+

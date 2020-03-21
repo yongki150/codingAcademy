@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="item">
+            <a class="item-list btn c1"  href="#open-modal">로그인</a>
+            <a class="item-list btn btn_large c2"  href="#open-checkout">강좌구매</a>
+            <a class="item-list btn btn_large c3" href="http://192.168.0.29/login.html">
+                <img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/30.User-512.png">
+                마이페이지
+            </a>
+            <a class="item-list btn btn_large c4" href="eventPage.html">
+                <img src="https://cdn3.iconfinder.com/data/icons/survey-rating/512/Survey_rating_rate-02-512.png">
+                설문조사
+            </a>
+
+            <div id="open-modal" class="modal-window">
+                <div>
+                    <a href="#modal-close" class="modal-close btn">Close</a>
+                    <p>
+                        <b>아이디</b>
+                        <input type="text" value="" style="width: 80%;">
+                        <br>
+                        <b>패스워드</b>
+                        <input type="password" style="width: 80%;">
+                        <a href="#" class="btn" style="color: #efefef;
+                        background-color: #f9b253 ;
+                        width: 80%;
+                        margin: 20px auto;
+                        ">로그인</a>
+                    </p>
+                </div>
+            </div>
+            <div id="open-checkout" class="open-checkout">
+                <div>
+                    <a class="close-checkout btn" href="#close-checkout">Close</a>
+                    <strong class="intro-video">&lt소개영상&gt</strong>
+                    <div class="checkout-video">
+                        <iframe src="https://player.vimeo.com/video/92688656?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="video"></iframe>
+                    </div>
+                    <div>
+                        <span><strong>$</strong>10</span>
+                        <a href="#" class="checkout-btn btn">장바구니</a>
+                        <a href="#" class="checkout-btn btn">바로구매</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-section">
+            <div class="logo-section">
+                <!-- <a class="logo" href="">Logo</a> -->
+                <h1 class="logo-title">
+                    <span class="c1_c">C</span><span class="c2_c">o</span><span class="c3_c">d</span><span class="c4_c">ing</span> Academy</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div style="background-color: #ddd;">
+            <div class="slide">
+                <div class="w3-content w3-display-container">
+                    <img class="mySlides" src="https://cdn.pixabay.com/photo/2015/05/15/14/38/computer-768608_1280.jpg" style="width:100%">
+                    <img class="mySlides" src="https://cdn.pixabay.com/photo/2015/03/26/09/40/keyboard-690066_1280.jpg" style="width:100%">
+                  
+                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <!-- <div class="menu-section">
+                <ul class="menu-bar clearfix">
+                    <li><a class="menu" href="#">소개</a></li>
+                    <li><a class="menu" href="#">FAQ</a></li>
+                </ul>
+            </div> -->
+            <div class="boxes clearfix">
+                <div class="box html">
+                    <img class="box-logo" src="https://cdn0.iconfinder.com/data/icons/social-network-9/50/22-512.png">
+                    <div class="box-contents">
+                        <h1>HTML course</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequatur, perferendis corporis dolor unde aspernatur explicabo omnis voluptates assumenda accusantium ab debitis eius, autem est tenetur atque ipsa aut minus!</p>
+                    </div>
+                    <div class="box-footer">
+                        <a href="#" class="button"><span>enroll course</span></a>
+                    </div>
+                </div>
+                <div class="box css">
+                    <img class="box-logo" src="https://cdn1.iconfinder.com/data/icons/social-media-logos-7/64/css-3-512.png">
+                    <div class="box-contents">
+                        <h1>CSS course</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequatur, perferendis corporis dolor unde aspernatur explicabo omnis voluptates assumenda accusantium ab debitis eius, autem est tenetur atque ipsa aut minus!</p>
+                    </div>
+                    <div class="box-footer">
+                        <a href="#" class="button"><span>enroll course</span></a>
+                    </div>
+                </div>
+                <div class="box js">
+                    <img class="box-logo box-logo-large" src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png">   
+                    <div class="box-contents">
+                        <h1>Javascript course</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequatur, perferendis corporis dolor unde aspernatur explicabo omnis voluptates assumenda accusantium ab debitis eius, autem est tenetur atque ipsa aut minus!</p>
+                    </div>
+                    <div class="box-footer">
+                        <a href="#" class="button"><span>enroll course</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="figure">
+            <div class="wrapper">
+                <ul class="figure-box clearfix">
+                    <li class="figure-section">
+                        <h2>18</h2>
+                        <span>YEARS OF EXPERIENCE</span>
+                    </li>
+                    <li class="figure-section">
+                        <h2>17</h2>
+                        NEW STUDENTS
+                    </li>
+                    <li class="figure-section">
+                        <h2>26</h2>
+                        QUALIFIED TEACHERS
+                    </li>
+                    <li class="figure-section">
+                        <h2>12</h2>
+                        TOTAL GROUPS
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            &copy yongki
+        </div>
+    </footer>
+    <script>
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+    </script>
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>
