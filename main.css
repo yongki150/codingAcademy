@@ -1,4 +1,5 @@
-body, ul, h1, h2{
+/* CSS RESET */
+body, ul, h1, h2, p{
     padding: 0;
     margin: 0;
 }
@@ -9,92 +10,130 @@ a{
     text-decoration: none;
     color: inherit
 }
-body{
-    text-align: center;
-    background-color: white;
-}
-.wrapper{
-    /* background-color: yellow; */
-    max-width: 980px;  
-    margin: 0 auto 20px;
-}
 .clearfix:after{
     content:' ';
     display: block;
     clear: both;
 }
-.btn{
-    /* background-color: red; */
-    /* border-radius: 5px; */
-    color: #efefef;
-    display: block;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 2rem;
-    text-align: center;
-    width: 150px;
-}
-.btn_large{
-    /* padding: 0 5rem; */
-    width: 250px;
-    background-color: lightseagreen;
-}
 
-.item{
-    font-weight: bold;
-    font-size: 2rem;
-    /* background-color: pink; */
-    position: fixed;
-    left: 10px;
-    top: 10%;
-    z-index : 10;
+body{
     text-align: center;
-    font-size: 1.5em;
-    line-height: 1;
+    background-color: white;
 }
-.item-list{
-    background-color: aqua;
+.wrapper{
+    width: 780px;  
     margin: 0 auto 20px;
 }
-.item-list:last-child(){
-    margin: 0;
+header{
+    margin: 50px 0;
 }
-.item-list > img{
+.header-section img{
+    width: 150px;
+    height: 150px;
+    /* background-color: #ddd; */
+}
+.logo-title{
+    /* background-color: #ddd; */
+    display: inline-block;
+    font-size: 5em;
+    font-family: 'Sigmar One', cursive;
+    vertical-align: bottom;
+}
+.logo-title a{
+    display: block;
+}
+/* Components */
+.btn{
+    background-color: orangered;
+    color: #efefef;
+    padding: 0 30px;
+    display: inline-block;
+    width: 80%;
+}
+.btn_large{
+    width: 250px;
+    /* background-color: lightseagreen; */
+}
+.item-section{
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    margin-left: 20px;
+    z-index : 10;
+}
+.item-list{
+    margin: 0 auto 20px;
+    
+    background-color: #333;
+}
+.item-list:last-child{
+    margin-bottom: 0;
+}
+.item-list a{
+    border-radius: 5px;
+    display: inline;
+}
+.item-list a img{
     width: 32px;
     height: 32px;
 }
+.menu-section{
+    background-color: #8372ce;
+    font-weight: bold;
+    color: #ddd;
+}
+.menu-bar{
+    /* background-color: pink; */
+}
+.menu-bar li{
+    margin-right: 20px;
+}
+.menu{
+    padding: 10px 30px;
+    border: 3px solid #8372ce;
+    float: right;
+}
+.menu:hover{
+    color: #fe594e;
+    border: 3px solid #fe594e;
+}
+/* modal : 사용자의 명령 인식을 위한 창 */
 .modal-window{
     border-radius: 5px;
     position: fixed;
+
+    /* 창이 생기는 효과 */
     background-color: rgba(1, 1, 1, 0.15);
-    /* background-color:  red; */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    pointer-events: none;
 
-    opacity: 0; /* 글자가 안보이다가 */
-    transition: all 0.3s;
+    /* EVENT */
+    pointer-events: none; /* 👍 */
+    opacity: 0; /* 👍 컨텐츠 가리고있다가 */
+    transition: all 0.5s;
 }
-/* .modal-window의 id open-moda와 연결된 
-    href='#open-moda'를 클릭시 
-    .modal-window가 활성화됨 */
 .modal-window:target{ 
-    opacity: 1; /* 클릭시 보이게 하는 효과 
-                    opacitiy만 있을시 같은화면에 공존안됨 */
-    pointer-events: auto; /* 클릭시 활성화 */
+    /* 클릭시 보이게 하는 효과 */
+    opacity: 1; 
+    /* 클릭시 활성화 */
+    pointer-events: auto;
 }
-.modal-window > div{
+.modal-window div{
     background-color: #f3f3f3;
-    /* background-color: black; */
     color: #f9b253;
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     position: relative;
     padding: 30px;
     margin: 20px;
     border-radius: 8px;
+    overflow: hidden;
+}
+.modal-window div p{
+    margin-top: 20px;
 }
 .modal-close{
     position: absolute;
@@ -104,124 +143,71 @@ body{
     background-color: #f9b253 ;
 }
 .modal-close:hover {
-    color: lightgrey; /* 444 → 000 */
-  }
+    color: initial;
+}
+/* 
+    👍 EVENT display none → block 이용 
+    단, transition 효과는 없음
+*/
 .open-checkout{
+    border-radius: 5px;
     position: fixed;
+
+    background-color: rgba(1, 1, 1, 0.15);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
     pointer-events: none;
     display: none;
 }
 .open-checkout:target{
-    /* opacity: 1; */
     pointer-events: auto;
     display: block;
 }
 .open-checkout > div{
     background-color: #f3f3f3;
-    width: 400px;
-    height: 600px;
+    color: #fe594e;
+    width: 300px;
     position: relative;
     padding: 30px;
     margin: 20px;
     border-radius: 8px;
-    color: #fe594e;
-    
-    /* opacity: 0; */
-    /* pointer-events: auto; */
+    overflow: hidden;
 }
-
-.close-checkout{
-    background-color: #fe594e;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 40%;
-}
-.close-checkout:hover{
-    color: yellow;
-}
-.intro-video{
-    /* background-color: firebrick; */
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-}
-.checkout-video{
-    /* background-color: pink; */
+.open-checkout strong{
+    display: inline-block;
     margin: 20px 0;
-    height: 50%;
 }
 .video{
+    background-color: pink;
+    position: relative;
+    padding-top: 56.25%;
+}
+.video-iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
 }
-.checkout-btn{
-    background-color : #fe594e;
-    width: 80%;
-    margin: 10px auto 20px;
+.open-checkout-content{
+    /* background-color: #666; */
 }
-
-.logo-section{
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-    height: 30vh;
-    text-align: center;
-    /* display: table; */
-    margin: 0 auto;
+.open-checkout-content a{
+    margin-bottom: 20px;
 }
-.logo-title{
-    /* background-color: pink; */
-    font-size: 5em;
-    /* display: table-cell; */
-    margin-top: 50px;
-    font-family: 'Sigmar One', cursive;
+.open-checkout-content a:last-child{
+    margin-bottom: 0;
 }
-.logo{
-    background-image: url(https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Coding-Html-512.png);
-    
-    background-size: 128px;
-    /* background-color: peru; */
-    background-position: center;
-    background-repeat: no-repeat;
-    float: left;
-    width: 150px;
-    height: 150px;
-    text-indent: -9999px;
-    position: relative;
-    top: 30px;
-}  
-.menu-section{
-    margin-top: -50px;
-    /* background-color: peru; */
+section{
+    background-color: #ddd;
+    margin-top: -20px;
 }
-.menu-bar{
-    background-color: #8372ce;
+.mySlides{
+    width: 400px;
 }
-.menu{
-    padding: 30px;
-    
-    float: left;
-    border-right: 1px solid #efefef;
-}
-.slide{
-    z-index: 0;
-    position: relative;
-}
-.boxes{
-    margin: 300px -10px 50px;
-}
-.box{
-    width: 33.33333%;
-    box-sizing: border-box; /* padding 포함 */
-    padding: 0 10px;
-    float: left;
-}
-
 .c1{ background-color: #f9b253;}
 .c2{ background-color: #fe594e;}
 .c3{ background-color: #35a2a5;}
@@ -232,81 +218,105 @@ body{
 .c3_c{color: #35a2a5;}
 .c4_c{color: #8372ce;}
 
-.box.html {color: #f16529;}
-.box.css {color: #48a0dc;}
-.box.js {color: #F0DB4E;}
+.html {color: #f16529;}
+.css {color: #48a0dc;}
+.js {color: #F0DB4E;}
 
+/* l_row */
+.boxes{
+    margin: 150px -10px 50px;
+    background-color: #ddd;
+}
+/* l_col */
+.box{
+    width: 33.333333%;
+    box-sizing: border-box; 
+    padding: 0 10px;
+    float: left;
+}
+.box-logo{
+    width: 150px;
+    margin-top: -100px;
+}
+.box-logo:hover{
+    width: 200px;
+    transition: all 0.5s;
+}
 .box-contents{
-    background-color: antiquewhite;
+    background-color: #666;
     padding: 40px 10px;
     margin: -30px 0;
     border-radius: 8px;
-}
-.box-logo{
-    width: 200px;
-    margin-top: -300px;
-}
-.box-logo-large{
-    width: 256px;
-    margin-bottom: -30px;
-}
-.box-logo:hover{
-    width: 300px;
-    transition: all 0.5s;
 }
 .box-contents h1{
     border-top: 5px solid;
     border-bottom: 5px solid;
     display: inline-block;
+    color: currentColor;
 }
 .box-contents p{
-    color: black;
+    color: #ddd;
+    text-indent: 10px;
+    text-align: left;
+    margin: 20px 0;
 }
 .box-footer{
     padding: 20px;
     background-color: #333;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-}
-.button{
-    background-color: currentColor;
-    padding: 20px 0 10px;
-    border-radius: 5px;
-}
-.button span{
-    color: white;
-    font-size: 2em;
     font-weight: bold;
 }
+.box-footer a{
+    /* 
+        👍 currentColor를 사용하는 이상 color를 변경할 수 없음 
+        내부 태그를 만들어 변경해줘야함
+    */
+    background-color: currentColor;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-bottom: 5px solid rgba(0,0,0,0.2);
+}
+.box-footer a:hover{
+    border-bottom: 0;
+    margin-top: 5px;
+}
+.box-footer a span{
+    color: #ddd;
+}
+.btn.js span{
+    color: #666;
+}
 footer{
-    /* border-top: 1px solid black; */
+    margin: 0 auto 100px;
 }
 .figure{
     background: #8372ce;
-    color: white;
+    color: #ddd;
 }
 .figure-box{
     padding: 30px;
-    margin: 0 -50px;
-    box-sizing: border-box;
+    margin: 0 -30px;
 }
 .figure-section{
-    /* background-color: peru; */
+    /* background-color: #666; */
     float: left;
     border-right: 1px solid #efefef;
     width: 25%;
-    
+    padding: 10px;
+    box-sizing: border-box;
 }
 .figure-section:last-child{
     border-right: 0;
 }
 .figure-section h2{
-    font-size: 10em;
+    font-size: 10rem;
     line-height: 1;
-    padding: 0 0 0.2em;
+    margin-bottom: 20px;
 }
 .figure-section span{
-    margin: 10px;
+    display: block;
+    margin-top: -20px;
 }
 
 
